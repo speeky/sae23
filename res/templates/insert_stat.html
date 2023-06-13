@@ -1,0 +1,56 @@
+<%inherit file="template.html"/>
+
+<h3>Insertion d'un d'une statistique</h3>
+
+<p class="message alert alert-${type}">${message}</p>
+
+<form action="insertStat" method="POST" class="needs-validation" novalidate>
+  <div class="form-group">
+    <label for="num_match">Numéro Match:</label>
+    <input type="number" class="form-control" id="num_match" placeholder="Entrer le numéro du match" name="num_match" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="num_joueur">Numéro du joueur:</label>
+    <input type="number" class="form-control" id="num_joueur" placeholder="Enter le numéro du joueur" name="num_joueur" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="presence">Présence:</label>
+    <input type="number" class="form-control" id="presence" placeholder="Présence ? (1=oui, 0=non)" name="presence" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="position">Position:</label>
+    <input type="text" class="form-control" id="position" placeholder="Position du joueur (demi, ailier, contre-pointe, pointe, gardien)" name="position" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="nb_but">Nombre de but:</label>
+    <input type="number" class="form-control" id="nb_but" placeholder="Nombre de but" name="nb_but" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="nb_faute">Nombre de faute:</label>
+    <input type="number" class="form-control" id="nb_faute" placeholder="Nombre de faute" name="nb_faute" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Insérer</button>
+</form>
+<br>
+
+<h3>Liste des matchs :</h3>
+% for a in match :
+	<div class="player"><h3>${a}</h3></div><br>
+% endfor
+
+<h3>Liste des joueurs :</h3>
+% for a in joueur :
+	<div class="player"><h3>${a}</h3></div><br>
+% endfor

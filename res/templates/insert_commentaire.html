@@ -1,0 +1,31 @@
+<%inherit file="template.html"/>
+
+<h3>Ajouter un commentaire</h3>
+
+<p class="message alert alert-${type}">${message}</p>
+
+<form action="commentaire" method="POST" class="needs-validation" novalidate>
+  <div class="form-group">
+    <label for="minute">La minute de jeu :</label>
+    <input type="number" class="form-control" id="minute" placeholder="Entrez la minute de jeu" name="minute" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="commentaire">Le commentaire:</label>
+    <input type="text" class="form-control" id="commentaire" placeholder="Entrez le commentaire" name="commentaire" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="id">ID du match:</label>
+    <input type="number" class="form-control" id="id" placeholder="Entrez l'ID du match" name="id" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Insérer</button>
+</form>
+<br>
+% for a in com :
+	<div class="player"><h3>${a}</h3></div><br>
+% endfor

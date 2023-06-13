@@ -1,0 +1,40 @@
+<%inherit file="template.html"/>
+
+<h3>Modification d'une statistique</h3>
+
+<p class="message alert alert-${type}">${message}</p>
+
+<form action="modifStat" method="POST" class="needs-validation" novalidate>
+  <div class="form-group">
+    <label for="presence">Présence:</label>
+    <input type="number" class="form-control" id="presence" placeholder="Présence ? (1=oui, 0=non)" name="presence" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="position">Position:</label>
+    <input type="text" class="form-control" id="position" placeholder="Position du joueur (demi, ailier, contre-pointe, pointe, gardien)" name="position" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="nb_but">Nombre de but:</label>
+    <input type="number" class="form-control" id="nb_but" placeholder="Nombre de but" name="nb_but" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="nb_faute">Nombre de fautes:</label>
+    <input type="number" class="form-control" id="nb_faute" placeholder="Numéro" name="nb_faute" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="id">Numéro de la statistique:</label>
+    <input type="number" class="form-control" id="id" placeholder="Numéro" name="id" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Modifier</button>
+</form>
+<br>

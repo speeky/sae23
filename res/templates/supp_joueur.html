@@ -1,0 +1,22 @@
+<%inherit file="template.html"/>
+<link rel="stylesheet" href="../css/style.css" >
+<h3>Suppression d'un joueur par son numéro</h3>
+
+</pre>
+<p class="message alert alert-${type}">${message}</p>
+
+
+<form action="suppressJoueur" method="POST">
+  <div class="form-group">
+    <label for="num">Numéro:</label>
+    <input type="number" class="form-control" placeholder="Numéro du joueur" name="num" id="num">
+  </div>
+  <button type="submit" class="btn btn-primary">Supprimer</button>
+</form>
+
+<br>
+
+<h3>Liste des joueurs :</h3>
+% for a in joueur :
+	<div class="player"><h3>${a}</h3></div><br>
+% endfor

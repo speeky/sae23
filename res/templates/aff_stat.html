@@ -1,0 +1,28 @@
+<%inherit file="template.html"/>
+<h2>Afficher une statistique</h2>
+<br>
+<form action="aff_stat" method="GET">
+  <div class="form-group">
+    <label for="num_match">Numéro match:</label>
+    <input type="number" class="form-control" placeholder="Numéro du match" name="num_match" id="num_match" required>
+  </div>
+  <div class="form-group">
+        <label for="num_joueur">Numéro joueur :</label>
+        <input type="number" class="form-control" placeholder="Numéro du joueur" name="num_joueur" id="num_joueur" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Afficher</button>
+</form>
+
+
+<br>
+<h3>Liste des joueurs :</h3>
+% for a in joueur :
+	<div class="player"><h3>${a}</h3></div><br>
+% endfor
+
+
+
+<h3>Liste des matchs :</h3>
+% for a in match :
+	<div class="player"><h3>${a}</h3></div><br>
+% endfor

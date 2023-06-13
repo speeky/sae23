@@ -1,0 +1,52 @@
+<%inherit file="template.html"/>
+
+<h3>Insertion d'un match</h3>
+
+<p class="message alert alert-${type}">${message}</p>
+
+<form action="insertMatch" method="POST" class="needs-validation" novalidate>
+  <div class="form-group">
+    <label for="adversaire">Adversaire:</label>
+    <input type="text" class="form-control" id="adversaire" placeholder="Entrer le club adverse" name="adversaire" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="date">Date:</label>
+    <input type="date" class="form-control" id="date" placeholder="Enter la date (année-mois-jour)" name="date" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="lieu">Lieu:</label>
+    <input type="text" class="form-control" id="lieu" placeholder="Lieu de la rencontre" name="lieu" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="score_mon_equipe">Score CNA:</label>
+    <input type="number" class="form-control" id="score_mon_equipe" placeholder="Score CNA" name="score_mon_equipe" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="score_adversaire">Score Adverse:</label>
+    <input type="number" class="form-control" id="score_adversaire" placeholder="Adverse" name="score_adversaire" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="gagnant">CNA gagnant ?:</label>
+    <input type="number" class="form-control" id="gagnant" placeholder="CNA gagnant (1=oui, 0=non)" name="gagnant" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+
+  <div class="form-group">
+    <label for="saison">Saison:</label>
+    <input type="text" class="form-control" id="saison" placeholder="Saison" name="saison" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Insérer</button>
+</form>

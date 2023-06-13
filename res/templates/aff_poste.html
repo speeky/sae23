@@ -1,0 +1,10 @@
+<%inherit file="template.html"/>
+<h2>Afficher les joueurs par poste</h2>
+<br>
+<form action="aff_poste" method="GET">
+    <div class="form-group">
+        <label for="poste">Poste :</label>
+        <input type="text" class="form-control" placeholder="Poste du joueur (demi, ailier, contre-pointe, pointe, gardien)" name="poste" id="poste" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Afficher</button>
+</form>

@@ -1,0 +1,33 @@
+<%inherit file="template.html"/>
+
+<h3>Insertion d'un joueur</h3>
+
+<p class="message alert alert-${type}">${message}</p>
+
+<form action="insertJoueur" method="POST" class="needs-validation" novalidate>
+  <div class="form-group">
+    <label for="prenom">Prénom:</label>
+    <input type="text" class="form-control" id="prenom" placeholder="Entrer le prénom" name="prenom" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="nom">Nom:</label>
+    <input type="text" class="form-control" id="nom" placeholder="Enter le nom" name="nom" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="annee">Année:</label>
+    <input type="text" class="form-control" id="annee" placeholder="Année du joueur" name="annee" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <div class="form-group">
+    <label for="poste">Poste:</label>
+    <input type="text" class="form-control" id="poste" placeholder="Poste du joueur (demi, ailier, contre-pointe, pointe, gardien)" name="poste" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Remplir ce champ, SVP!</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Insérer</button>
+</form>

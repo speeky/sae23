@@ -1,0 +1,15 @@
+<%inherit file="template.html"/>
+<h2>Insérer ses identifiants de coach pour pouvoir insérer</h2>
+<br>
+<form action="login" method="GET">
+  <div class="form-group">
+    <label for="login_str">Utilisateur :</label>
+    <input type="text" class="form-control" placeholder="Utilisateur" name="login_str" id="login_str" required>
+  </div>
+  <div class="form-group">
+    <label for="mdp">Mot de passe :</label>
+    <input type="text" class="form-control" placeholder="Mot de passe" name="mdp" id="mdp" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Se connecter</button>
+</form>

@@ -1,0 +1,14 @@
+<%inherit file="template.html"/>
+<h2>Afficher les joueurs par nom et prénom</h2>
+<br>
+<form action="aff_nom" method="GET">
+  <div class="form-group">
+    <label for="nom">Nom :</label>
+    <input type="text" class="form-control" placeholder="Nom" name="nom" id="nom" required>
+  </div>
+  <div class="form-group">
+        <label for="prenom">Prénom :</label>
+        <input type="text" class="form-control" placeholder="Prénom" name="prenom" id="prenom" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Afficher</button>
+</form>
