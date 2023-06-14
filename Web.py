@@ -304,6 +304,3 @@ class InterfaceWebEtudiants(object):
             typ = "warning"
         mytemplate = mylookup.get_template("modif_stat.html")
         return mytemplate.render(message=message, type=typ, joueur=string_web(get_joueur()), match=stringm_web(get_matchs()))
-
-
-cherrypy.quickstart(InterfaceWebEtudiants(), '/', 'config.txt')
